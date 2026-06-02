@@ -1,0 +1,23 @@
+[project]
+name = "trading-journal-risk-analyzer"
+version = "0.1.0"
+description = "A CLI for turning trade journal entries into risk, R-multiple, and behavior feedback."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Xia Tian"}]
+dependencies = []
+
+[project.scripts]
+trade-risk = "trading_journal_risk.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
